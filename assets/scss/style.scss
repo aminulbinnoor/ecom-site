@@ -1,0 +1,175 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+
+@import "./site-variables.scss";
+
+
+// @font-face {
+//   font-family: 'FS Meridian';
+//   src: url('/fonts/FSMeridian-Thin.eot');
+//   src: local('FS Meridian Thin'), local('FSMeridian-Thin'),
+//       url('/fonts/FSMeridian-Thin.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/FSMeridian-Thin.woff2') format('woff2'),
+//       url('/fonts/FSMeridian-Thin.woff') format('woff'),
+//       url('/fonts/FSMeridian-Thin.ttf') format('truetype');
+//   font-weight: 100;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'FS Meridian';
+//   src: url('/fonts/FSMeridian-Medium.eot');
+//   src: local('FS Meridian Medium'), local('FSMeridian-Medium'),
+//       url('/fonts/FSMeridian-Medium.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/FSMeridian-Medium.woff2') format('woff2'),
+//       url('/fonts/FSMeridian-Medium.woff') format('woff'),
+//       url('/fonts/FSMeridian-Medium.ttf') format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'FS Meridian';
+//   src: url('/fonts/FSMeridian-Bold.eot');
+//   src: local('FS Meridian Bold'), local('FSMeridian-Bold'),
+//       url('/fonts/FSMeridian-Bold.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/FSMeridian-Bold.woff2') format('woff2'),
+//       url('/fonts/FSMeridian-Bold.woff') format('woff'),
+//       url('/fonts/FSMeridian-Bold.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'FS Meridian';
+//   src: url('/fonts/FSMeridian-Regular.eot');
+//   src: local('FS Meridian Regular'), local('FSMeridian-Regular'),
+//       url('/fonts/FSMeridian-Regular.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/FSMeridian-Regular.woff2') format('woff2'),
+//       url('/fonts/FSMeridian-Regular.woff') format('woff'),
+//       url('/fonts/FSMeridian-Regular.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'FS Meridian';
+//   src: url('/fonts/FSMeridian-Light.eot');
+//   src: local('FS Meridian Light'), local('FSMeridian-Light'),
+//       url('/fonts/FSMeridian-Light.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/FSMeridian-Light.woff2') format('woff2'),
+//       url('/fonts/FSMeridian-Light.woff') format('woff'),
+//       url('/fonts/FSMeridian-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+
+// }
+
+body {
+  padding: 0;
+  margin: 0 !important;
+  font-family: 'FS Meridian', 'kalpurush', sans-serif !important;
+  // "Roboto" , 'kalpurush',
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+
+.without-focus {
+  &:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.btn,
+.form-control,
+.btn-check {
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba($color: $site-primary, $alpha: 0.25);
+  }
+}
+
+.form-control{
+  &:focus{
+    border-color: $site-primary;
+  }
+}
+
+.error {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 13px;
+  color: #dc3545;
+}
+
+.in-fav {
+  svg {
+    path {
+      fill: $site-primary;
+    }
+  }
+}
+.splide--nav > .splide__track > .splide__list > .splide__slide,
+.splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
+  border: 0;
+}
+
+
+.title{
+  color: #2c2c2c;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+
+
+@media (min-width: 1200px) {
+  .signinSignup-modal {
+    max-width: 950px;
+  }
+}
+
+
+.nav-sticky-top {
+  &.main-menu-bar{
+    &--scrolled+.me{
+      margin-top: 68px;
+    }
+  }
+}
+
+.lazyLoad .isLoaded {
+    border: 2px solid red;
+}
+
+@media(max-width: 575px){
+  .title{
+    font-size: 25px;
+  }
+}
+
+
